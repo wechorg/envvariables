@@ -1,0 +1,17 @@
+name: PR_from_fork
+
+on:
+  pull_request:
+
+env:
+  PASSWORD: mypassword12345
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Log stuff
+      run: echo I did run from the fork
