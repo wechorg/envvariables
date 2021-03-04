@@ -1,0 +1,37 @@
+name: LogsWorkflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Job 1 log
+        run: echo Hello from job 1
+  test2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Job 2 log
+        run: echo Hello from job 2
+  
+  test3:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Job 3 log
+        run: echo Hello from job 3
+        
+
